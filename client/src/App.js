@@ -6,14 +6,12 @@ import Axios from "axios";
 
 function App(){
   return(
-   <BrowserRouter basename="dogebank.herokuapp.com/">
     <Router>
     <Switch>
     <Route path="/next" component={Next} />
     <Route path="/" component={Home} />
     </Switch>
     </Router>
-    </BrowserRouter>
     );
 }
 
