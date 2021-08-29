@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import Axios from "axios";
 
 function App(){
@@ -35,7 +35,7 @@ function Home() {
       <p className="text-jost text-left">
     Inspired by the best of Doge. Scale your business superfast - as seamlessly as cutting a piece of cake. A digital bank built to perfectly serve your business.
       <p className="my-3">
-      <a className="btn btn-default" href="/next">Get started</a>
+      <Link className="btn btn-default" href="/next">Get started</Link>
       </p>
       </p>
       </div>
