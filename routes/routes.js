@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const detailsSchemaCopy = require("../models/detailsmodel");
-
+const path = require('path');
 router.post("/details",async (request, response) => {
   
  const received = new detailsSchemaCopy ({
@@ -13,7 +13,7 @@ router.post("/details",async (request, response) => {
 });
 
 
-router.get("/", (req,res) => {
+router.get("/get", (req,res) => {
   detailsSchemaCopy.find({}, (err,result) => {
     if(err){
       console.log(err);

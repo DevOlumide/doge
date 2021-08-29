@@ -13,9 +13,6 @@ mongoose.connect(process.env.MONGODB_URI || mongodbConnectURL, {useNewUrlParser:
   console.log("Mongoose connected successfully")
 });
 
-app.get('/*', function (req, res) {
-   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
- }); 
 
 
 app.use(express.json());
@@ -23,12 +20,8 @@ app.use(cors());
 app.use("/app", routes);
 
 
-
-
 if(process.env.NODE_ENV === "production"){
  app.use(express.static('client/build'));
-
- 
 }
 
 
