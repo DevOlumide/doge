@@ -14,14 +14,17 @@ mongoose.connect(process.env.MONGODB_URI || mongodbConnectURL, {useNewUrlParser:
 });
 
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+
+
 app.use(express.json());
 app.use(cors());
 app.use("/app", routes);
 
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
 
 
 if(process.env.NODE_ENV === "production"){
