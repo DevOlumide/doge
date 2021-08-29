@@ -35,7 +35,7 @@ function Home() {
       <p className="text-jost text-left">
     Inspired by the best of Doge. Scale your business superfast - as seamlessly as cutting a piece of cake. A digital bank built to perfectly serve your business.
       <p className="my-3">
-      <Link className="btn btn-default" href="/next">Get started</Link>
+      <Link className="btn btn-default" to="/next">Get started</Link>
       </p>
       </p>
       </div>
@@ -72,7 +72,7 @@ function Home() {
    
       </div>
    
-      <a href="/next" className="btn btn-light">Get started now</a>
+      <Link to="/next" className="btn btn-light">Get started now</Link>
       <p className="text-muted mt-6">
       &copy; 2021 Doge digital bank development team.
       </p>
