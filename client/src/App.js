@@ -109,7 +109,7 @@ function Next(){
     
     setComment("Loading...");
     
-    await Axios.post("/app/details", details).then((result) => {
+    await Axios.post("http://localhost:8080/app/details", details).then((result) => {
       
       
       if(status == 200){
