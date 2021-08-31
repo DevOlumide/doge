@@ -113,7 +113,7 @@ function Next(){
       
       
       if(status == 200){
-        setColor("#2F89FC"); 
+        setColor("green"); 
         } else{
         setColor("red");
       }

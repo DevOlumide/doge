@@ -14,17 +14,15 @@ mongoose.connect(process.env.MONGODB_URI || mongodbConnectURL, {useNewUrlParser:
 });
 
 
-app.get("/api", (req,res) => {
-  res.send("Working from here");
-});
-
 
 
 app.use(express.json());
 app.use(cors());
-app.use(express.static("client/build"));
 app.use("/app", routes);
 
+if(process.env.NODE_ENV === "production"){
+  app.use(express.static("client/build"));
+}
 
 
 app.listen(port, () => {
