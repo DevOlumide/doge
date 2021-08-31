@@ -14,13 +14,7 @@ router.post("/details",async (request, response) => {
 
 
 router.get("/get", (req,res) => {
-  detailsSchemaCopy.find({}, (err,result) => {
-    if(err){
-      console.log(err);
-    }
-    res.send(result);
-    
-  });
+    res.send("Working from router");
 })
 
 
