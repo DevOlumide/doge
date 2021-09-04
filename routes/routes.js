@@ -14,8 +14,9 @@ router.post("/details",async (request, response) => {
 
 
 router.get("/get", (req,res) => {
-    res.send("Working from router");
-})
-
+    detailsSchemaCopy.find({}, (err,result) => {
+      res.send(result);
+    });
+});
 
 module.exports = router;
